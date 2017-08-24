@@ -1,13 +1,11 @@
 from __future__ import print_function
-import nump as np
+import numpy as np
 
 
 class BayesClassifier(object):
 
     def __init__(self):
-        """Initialiaze the classifier with traning data.
-        """
-
+        """Initialiaze the classifier with training data."""
         self.labels = []
         self.mean = []
         self.var = []
@@ -15,10 +13,8 @@ class BayesClassifier(object):
 
     def train(self, data, labels=None):
         """Train on data (list of arrays n * dim).
-
            Labels are optional, default is 0, ... n-1.
         """
-
         if labels is None:
             labels = range(len(data))
         self.labels = labels
@@ -30,7 +26,6 @@ class BayesClassifier(object):
 
     def classify(self, points):
         """Classify points by computing probabilities for
-
            each class and return most probable label.
         """
 
@@ -47,7 +42,6 @@ class BayesClassifier(object):
 
 def gauss(m, v, x):
     """Evaluate gaussian in d-dimensions with independent
-
        mean m and variance v at the points in (the rows of) x.
     """
 
