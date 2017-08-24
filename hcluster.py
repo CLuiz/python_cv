@@ -1,4 +1,5 @@
 from itertools import combinations
+
 import numpy as np
 from PIL import Image, ImageDraw
 
